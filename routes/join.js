@@ -3,20 +3,23 @@ var router = express.Router();
 
 var mysqlDB = require('../mysql-db');
 
-router.get('/', function (req, res, next) {
+router.get('/join_form', function (req, res, next) {
     res.render('join');
 });
 
-router.post('/', function (req, res, next) {
+router.post('/join_process', function (req, res, next) {
     var userId = req.body['userId'];
     var userPw = req.body['userPw'];
+    var userNick = req.body['userNick'];
     var userPwRe = req.body['userPwRe'];
     if (userPw == userPwRe) {
-        mysqlDB.query('insert into test_user values(?,?)', [userId, userPw], function (err, rows, fields) {
+        mysqlDB.query('insert into test_user values(?,?,?)', [userId, userPw, userNick], function (err, rows, fields) {
             if (!err) {
-                res.send('success');
+                // res.send('success');
+                res.render('main')
             } else {
                 res.send('err : ' + err);
+                res.redirect('/');
             }
         });
     }else{

@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>login</h1>
+<form action='/login' method="post">
+    <label>id :</label><input type="text" name="userId"><br>
+    <label>pw :</label><input type="password" name="userPw"><br>
+    <input type="submit">
+</form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>로그인 페이지</title>
+  <link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <script type="text/javascript">
+    function homeSubmit(index) {
+      if (index == 1) {
+        document.login_form.action = '/join/join_form';
+      }
+      if (index == 2) {
+        document.login_form.action = '/login/login_process';
+      }
+      document.login_form.submit();
+    }
+  </script>
+  <div id="contents">
+    <h1>LOGIN</h1>
+      <form class="login_form" name="login_form" method="post">
+        <p class="id">
+          <label>UserId</label>
+          <input type="text" name="userId" placeholder="아이디를 입력하세요">
+        </p>
+        <p class="pw">
+          <label>Password</label>
+          <input type="password" name="userPw" placeholder="비밀번호를 입력하세요">
+        </p>
+        <p class="btn">
+          <input type="submit" class="joinbtn" value="Join" formmethod="get" onClick="homeSubmit(1)"> <!--회원가입 페이지 이동-->
+          <input type="submit" class="loginbtn" value="Login"  onClick="homeSubmit(2)"> <!--메인 페이지 이동-->
+        </p>
+      </form>
+  </div>
+</body>
+
+</html>

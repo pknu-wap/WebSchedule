@@ -1,6 +1,8 @@
+var mainRouter = require('./routes/main');
 var loginRouter = require('./routes/login');
 var joinRouter = require('./routes/join');
 var showAllDataRouter = require('./routes/show-all-data');
+
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -12,8 +14,8 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use('/', main);
-app.use('/',loginRouter);
+app.use('/', mainRouter);
+app.use('/login',loginRouter);
 app.use('/join',joinRouter);
 app.use('/show-all-data',showAllDataRouter);
 

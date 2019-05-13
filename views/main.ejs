@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>메인페이지</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+  <!--헤더-->
+  <header id="header">
+    <!--로고-->
+    <div id="logo">
+      <a href="main.html"><img src="img/calendar.png"></a>
+      <p>
+        <span class="logo_top">우리 언제 만나</span>
+        <span class="logo_btm">스케쥴매칭</span>
+      </p>
+    </div>
+    <!--로그인-->
+    <div id="info">
+      <input type="button" class="joinbtn" value="Join" onClick="location.href='/join/join_form'">
+      <input type="button" class="loginbtn" value="Login" onClick="location.href='/login/loginForm'">
+    </div>
+    <!--메뉴-->
+    <ul id="menu">
+      <li><a href="#">내 시간표</a></li>
+      <li><a href="#">스터디 모집</a></li>
+      <li><a href="#">스터디 게시판</a></li>
+      <li><a href="#">마이페이지</a></li>
+    </ul>
+  </header>
+  <!--헤더-->
+
+  <!--콘텐츠-->
+  <section id="section">
+    <div id="container">
+      <div id="wrap">
+        <div class="table_setting">
+          <form>
+            <select class="table_dropdown">
+              <option>새로운 시간표</option>
+            </select>
+          </form>
+          <button class="table_add">(+) 새로운 시간표 추가</button>
+        </div>
+        <table class="table" width="750" height="600" border="1">
+          <tr align="center">
+            <td width="50" bgcolor="#f2f2f2"></td>
+            <td width="100" bgcolor="#f2f2f2">월</td>
+            <td width="100" bgcolor="#f2f2f2">화</td>
+            <td width="100" bgcolor="#f2f2f2">수</td>
+            <td width="100" bgcolor="#f2f2f2">목</td>
+            <td width="100" bgcolor="#f2f2f2">금</td>
+          </tr>
+          <tr align="center">
+            <td>9</td>
+            <td></td>
+            <td bgcolor="#d0f4eb">전산실무</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>10</td>
+            <td></td>
+            <td bgcolor="#d0f4eb">전산실무</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>11</td>
+            <td></td>
+            <td bgcolor="#f9e1ee">컴파일러</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>12</td>
+            <td bgcolor="#c1ecf5">임베디드시스템</td>
+            <td bgcolor="#f9e1ee">컴파일러</td>
+            <td bgcolor="#c1ecf5">임베디드시스템</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>13</td>
+            <td bgcolor="#fbf3c4">일반물리</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>14</td>
+            <td></td>
+            <td bgcolor="#dee8f6">전산개론</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>15</td>
+            <td></td>
+            <td bgcolor="#dee8f6">전산개론</td>
+            <td bgcolor="#d5f4e3">운영체제</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>16</td>
+            <td bgcolor="#f0e8f3">기초수학</td>
+            <td></td>
+            <td bgcolor="#d5f4e3">운영체제</td>
+            <td bgcolor="#d2b7ea">컴퓨터그래픽스</td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>17</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td bgcolor="#d2b7ea">컴퓨터그래픽스</td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>18</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td bgcolor="#d2b7ea">컴퓨터그래픽스</td>
+            <td></td>
+          </tr>
+          <tr align="center">
+            <td>19</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="group">
+        <p class="p">그룹 추가할 예정...</p>
+        <div class="plus"><span>+</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--콘텐츠-->
+
+  <!--하단-->
+  <footer id="footer">
+    <p>made by. PKNU WAP 프로젝트 2조</p>
+  </footer>
+  <!--하단-->
+</body>
+
+</html>

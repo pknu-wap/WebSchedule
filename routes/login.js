@@ -13,25 +13,29 @@ var mysql_db = require('../mysql-db');
 //      });
 // }
 
-router.get('/', function (req, res, next) {
+router.get('/loginForm', function (req, res, next) {
     res.render('login');
 });
 
-router.post('/login', function (req, res, next) {
+router.post('/login_process', function (req, res, next) {
     var userId = req.body['userId'];
     var userPw = req.body['userPw'];
     mysql_db.query('select * from test_user where id=? and pw=?',[userId,userPw], function (err, rows, fields){
         if (!err) {
             if (rows[0]!=undefined) {
-                res.send('id : ' + rows[0]['id'] + '<br>' +
-                    'pw : ' + rows[0]['pw']);
+                // alert('Login Success!');
+                res.render('main')
             } else {
-                res.send('no data');
+                // alert('sign in id pw!!');
+                res.redirect('/');
             }
         } else {
             res.send('error : ' + err);
         }
     });
 });
+
+
+
 
 module.exports = router;

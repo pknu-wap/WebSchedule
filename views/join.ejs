@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join</title>
+</head>
+<body>
+<h1>join</h1>
+<form method="post">
+    <label>id :</label><input type="text" name="userId"><br>
+    <label>pw :</label><input type="password" name="userPw"><br>
+    <label>pw-re :</label><input type="password" name="userPwRe"><br>
+    <input type="submit">
+</form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>회원가입 페이지</title>
+  <link rel="stylesheet" type="text/css" href="css/join.css" />
+</head>
+
+<body>
+  <div id="contents">
+    <h1>JOIN</h1>
+      <form class="join_form" name="join_form" action='join_process' method="post">
+        <p class="id">
+          <label>UserId</label>
+          <input type="text" name="userId" placeholder="아이디를 입력하세요">
+        </p>
+        <p class="pw">
+          <label>Password</label>
+          <input type="password" name="userPw" placeholder="비밀번호를 입력하세요">
+        </p>
+        <p class="pwre">
+          <label>PasswordRe</label>
+          <input type="password" name="userPwRe" placeholder="비밀번호를 다시 입력하세요">
+        </p>
+        <p class="nickname">
+          <label>UserName</label>
+          <input type="text" name="userNick" placeholder="닉네임을 입력하세요">
+        </p>
+        <p class="btn">
+          <input type="submit" class="joinbtn" value="Join"><!--회원가입완료창 뜨고 다시 로그인페이지로 이동-->
+        </p>
+      </form>
+  </div>
+</body>
+
+</html>
